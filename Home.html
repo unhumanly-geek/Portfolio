@@ -211,31 +211,28 @@
         }
     </script>
     <form name="submit-to-google-sheet">
-        <input name="email" type="email" placeholder="Email" required>
-        <button type="submit">Send</button>
-    </form>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzMtRQk20bd3TaIw26NhQIFjNf-YNyRI2aBFnjAoj4-bYFtUgeIbdoisRxgOjoVKoU/exec'
-        const form = document.forms['submit-to-google-sheet']
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzMtRQk20bd3TaIw26NhQIFjNf-YNyRI2aBFnjAoj4-bYFtUgeIbdoisRxgOjoVKoU/exec'
+            const form = document.forms['submit-to-google-sheet']
 
-        // this is what i added to display submittted msg
-        const msg = document.getElementById("msg")
+            // this is what i added to display submittted msg
+            const msg = document.getElementById("msg")
 
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-        form.resest()
-                }) //added by me
-                // .then(response => console.log('Success!', response)) //this is pre-added
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        msg.innerHTML = "Message sent successfully"
+                        setTimeout(function () {
+                            msg.innerHTML = ""
+                        }, 5000)
+                        form.resest()
+                    }) //added by me
+                    // .then(response => console.log('Success!', response)) //this is pre-added
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
 
 </body>
 
