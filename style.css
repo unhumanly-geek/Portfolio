@@ -326,6 +326,7 @@ nav ul li a:hover::after {
 
 
 }
+
 .btn.btn1 {
     display: inline-block;
     background: #ff004f;
@@ -354,6 +355,7 @@ nav ul li a:hover::after {
 .social-icons {
     margin: 30px;
 }
+
 .btn.btn2 {
     display: inline-block;
     background: #ff004f;
