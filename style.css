@@ -37,12 +37,16 @@ nav {
     position: fixed;
     background-color: #080808;
     z-index: 10;
-    top: 0; /* position the navbar at the top of the page */
-  left: 0; /* position the navbar at the left edge of the page */
-  right: 0; /* position the navbar at the right edge of the page */
-  width: 100%; /* make the navbar take up the full width of the page */
-  height: 113px;
-    
+    top: 0;
+    /* position the navbar at the top of the page */
+    left: 0;
+    /* position the navbar at the left edge of the page */
+    right: 0;
+    /* position the navbar at the right edge of the page */
+    width: 100%;
+    /* make the navbar take up the full width of the page */
+    height: 113px;
+
 }
 
 .logo {
@@ -50,9 +54,10 @@ nav {
     height: 86px;
     margin-left: 9px;
     margin-top: 23px;
-    
+
 
 }
+
 nav ul {
     margin-left: 400px;
 }
@@ -100,7 +105,7 @@ nav ul li a:hover::after {
 
 .header-text h1 span {
     color: white;
-    background-image: linear-gradient( #ff004f , #4790fc);
+    background-image: linear-gradient(#ff004f, #4790fc);
 }
 
 /* ------about----- */
@@ -228,7 +233,7 @@ nav ul li a:hover::after {
 .services-list div:hover {
     background: #4790fc;
     transform: translateY(-10px);
-    
+
 }
 
 /* ---------portfolio---------- */
