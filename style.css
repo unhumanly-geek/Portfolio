@@ -506,11 +506,13 @@ nav .fa-solid {
 
     .header-text h1 {
         font-size: 30px;
+        margin-top: 265px;
     }
 
     nav .fa-solid {
         display: block;
         font-size: 25px;
+        margin-right: 15px;
     }
 
     nav ul {
@@ -571,7 +573,7 @@ nav .fa-solid {
     .logo {
         width: 211px;
         height: 55px;
-        margin-left: -35px;
+        margin-left: 21px;
         margin-top: 7px;
     }
 }
