@@ -408,6 +408,78 @@ form .btn2 {
     display: block;
 }
 
+/* social media icons */
+/* Style the social media container */
+.social {
+    position: fixed;
+    /* Make the container stay in the same position */
+    right: 0;
+    /* Place the container at the right edge of the page */
+    top: 50%;
+    /* Place the container at the vertical center of the page */
+    transform: translateY(-50%);
+    /* Adjust the position of the container */
+    display: flex;
+    /* Use flexbox layout */
+    flex-direction: column;
+    /* Arrange the icons vertically */
+    align-items: center;
+    /* Center the icons horizontally */
+}
+
+/* Style the social media icons */
+.social .fa-brands {
+    margin: 10px;
+    /* Add some space between the icons */
+    font-size: 30px;
+    /* Set the icon size */
+    width: 50px;
+    /* Set the icon width */
+    height: 50px;
+    /* Set the icon height */
+    line-height: 50px;
+    /* Center the icon vertically */
+    text-align: center;
+    /* Center the icon horizontally */
+    border-radius: 50%;
+    /* Make the icons circular */
+    color: white;
+    /* Set the icon color */
+}
+
+/* Add a hover effect for the icons */
+.social .fa-brands:hover {
+    opacity: 0.8;
+}
+
+.social .fa-square-x-twitter {
+    background: white;
+    color: #080808;
+}
+
+.social .fa-linkedin {
+    background: #0077B5;
+}
+
+.social .fa-square-github {
+    background: white;
+    color: #080808;
+}
+
+.social .fa-square-instagram {
+    background: #E4405F;
+}
+
+
+.social ul li a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.social ul li {
+    list-style: none;
+}
+
 /* -------css for small screens / responsive------- */
 nav .fa-solid {
     display: none;
