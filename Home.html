@@ -15,6 +15,9 @@
             <nav>
                 <img src="images/logo.png" class="logo">
                 <ul id="sidemenu">
+                    <li>
+                        <a href="" download class="btn btn1">Download CV</a>
+                    </li>
                     <li><a href="#header">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#services">SKILLS</a></li>
@@ -42,7 +45,8 @@
                     <h1 class="sub-title">ABOUT ME</h1>
                     <p>My name is Akshat Gulati and I come from Delhi. I am pursuing engineering in Computer Science at
                         Chitkara University. I have a passion for coding, and I love to play football in my spare time.
-                        My short-term goal is to become a software engineer at a renowned institution and during start
+                        My short-term goal is to become a software engineer at a renowned institution and during my
+                        prime time to start
                         my own business.</p>
 
                     <div class="tab-titles">
@@ -53,7 +57,7 @@
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Web Development</span><BR>DESIGNING WEB/APP</BR></li>
-                            <li><span>Software Engineer</span><BR>Software Development(Java/C/C++/Python)</BR></li>
+                            <li><span>Software Development</span><BR>Java/C/C++/Python</BR></li>
                             <li><span>Community Management</span><BR>Building Community</BR></li>
                         </ul>
                     </div>
@@ -66,7 +70,8 @@
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2024</span><BR>B.E Computer Science Engineering from Chitkara University, Punjab</BR>
+                            <li><span>2024</span><BR>B.E Computer Science Engineering from Chitkara University,
+                                Punjab</BR>
                             </li>
                             <li><span>2021</span><BR>12th from MSMS Delhi</BR></li>
                             <li><span>2019</span><BR>10th from MSMS Delhi</BR></li>
@@ -151,7 +156,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See More</a>
+            <!-- <a href="#" class="btn">See More</a> -->
         </div>
     </div>
     <!-- -----------portfolio end here----------- -->
@@ -170,7 +175,6 @@
 
                         <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
                     </div> -->
-                    <a href="" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
@@ -188,69 +192,73 @@
         </div>
     </div>
     <!-- -----------Contact us ends here----------- -->
+
+    <!-- ----------social media--------- -->
     <div class="social">
         <ul>
             <li><a href="#" class="fa-brands fa-square-x-twitter"></a></li>
             <li><a href="#" class=" fa-brands fa-linkedin"></a></li>
-            <li><a href="#" class= "fa-brands fa-square-github"></a></li>
+            <li><a href="#" class="fa-brands fa-square-github"></a></li>
             <li><a href="" class=" fa-brands fa-square-instagram"></a></li>
         </ul>
-        </div>
-    </body>
-    </html>
-    
-    <script>
-        // about me effects added
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link")
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-        // about me ended here
-
-
-    </script>
-    <script>
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
-    </script>
-    <form name="submit-to-google-sheet">
-
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzMtRQk20bd3TaIw26NhQIFjNf-YNyRI2aBFnjAoj4-bYFtUgeIbdoisRxgOjoVKoU/exec'
-            const form = document.forms['submit-to-google-sheet']
-
-            // this is what i added to display submittted msg
-            const msg = document.getElementById("msg")
-
-            form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(response => {
-                        msg.innerHTML = "Message sent successfully"
-                        setTimeout(function () {
-                            msg.innerHTML = ""
-                        }, 5000)
-                        form.resest()
-                    }) //added by me
-                    // .then(response => console.log('Success!', response)) //this is pre-added
-                    .catch(error => console.error('Error!', error.message))
-            })
-        </script>
-
+    </div>
+    <!-- ----------social media end here--------- -->
 </body>
 
 </html>
+
+<script>
+    // about me effects added
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+        // about me ended here
+
+
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<form name="submit-to-google-sheet">
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzMtRQk20bd3TaIw26NhQIFjNf-YNyRI2aBFnjAoj4-bYFtUgeIbdoisRxgOjoVKoU/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        // this is what i added to display submittted msg
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.resest()
+                }) //added by me
+                // .then(response => console.log('Success!', response)) //this is pre-added
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    </body>
+
+    </html>

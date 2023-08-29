@@ -76,6 +76,7 @@ nav ul li a {
 
 }
 
+
 nav ul li a::after {
     content: '';
     width: 0;
@@ -310,7 +311,6 @@ nav ul li a:hover::after {
 
 .btn {
     display: block;
-    margin: 50px auto;
     width: fit-content;
     border: 1px solid #ff004f;
     padding: 14px 50px;
@@ -325,6 +325,11 @@ nav ul li a:hover::after {
     background: #ff004f;
 
 
+}
+.btn.btn1 {
+    display: inline-block;
+    background: #ff004f;
+    margin: 1px auto;
 }
 
 /* ----------contact us--------- */
@@ -349,6 +354,11 @@ nav ul li a:hover::after {
 .social-icons {
     margin: 30px;
 }
+.btn.btn2 {
+    display: inline-block;
+    background: #ff004f;
+    margin: 30px auto;
+}
 
 .social-icons a {
     text-decoration: none;
@@ -363,11 +373,7 @@ nav ul li a:hover::after {
     transform: translateY(-5px);
 }
 
-.btn.btn2 {
-    display: inline-block;
-    background: #ff004f;
 
-}
 
 .contact-right form {
     width: 100%;
@@ -390,6 +396,7 @@ form .btn2 {
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
+    margin-bottom: 20px;
     cursor: pointer;
 }
 
