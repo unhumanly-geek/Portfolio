@@ -526,6 +526,11 @@ nav .fa-solid {
         z-index: 2;
         transition: right 0.5s;
     }
+    .btn.btn1{
+        background: #4790fc;
+        margin-left: -19px;
+        padding-right: 79px;
+    }
 
     nav ul li {
         display: block;
