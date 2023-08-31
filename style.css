@@ -46,6 +46,7 @@ nav {
     width: 100%;
     /* make the navbar take up the full width of the page */
     height: 113px;
+    overflow: auto;
 
 }
 
