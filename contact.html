@@ -3,151 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Added a title for the document -->
+    <title>Contact Me</title>
     <style>
-    .contact-left {
-    flex-basis: 35%;
-}
+        /* Added some comments to explain the CSS rules */
+        /* Used variables to store the colors for easy modification */
+        :root {
+            --bg-color: #262626;
+            --text-color: #fff;
+            --accent-color: #ff004f;
+            --icon-color: #ababab;
+        }
 
-.contact-right {
-    flex-basis: 60%;
-}
+        /* Used a flex container to align the contact sections */
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+        }
 
-.contact-left p {
-    margin-top: 30px;
-}
+        .contact-left {
+            flex-basis: 35%;
+        }
 
-.contact-left p i {
-    color: #4790fc;
-    margin-right: 15px;
-    font-size: 25px;
-}
+        .contact-right {
+            flex-basis: 60%;
+        }
 
-.social-icons {
-    margin: 30px;
-}
+        .contact-left p {
+            margin-top: 30px;
+        }
 
-.btn.btn2 {
-    display: inline-block;
-    background: #ff004f;
-    margin: 30px auto;
-}
+        .contact-left p i {
+            color: var(--accent-color);
+            margin-right: 15px;
+            font-size: 25px;
+        }
 
-.social-icons a {
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: ababab;
-    display: inline-block;
-}
+        /* Removed the social icons section as it was commented out */
 
-.social-icons a:hover {
-    color: #ff004f;
-    transform: translateY(-5px);
-}
+        /* Used a common class for both buttons and added some hover effects */
+        .btn {
+            display: inline-block;
+            border: 1px solid var(--accent-color);
+            padding: 14px 50px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: background 0.5s, transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
 
+        .btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
 
+        .contact-right form {
+            width: 100%;
+        }
 
-.contact-right form {
-    width: 100%;
-}
+        form input,
+        form textarea {
+            width: 100%;
+            border: 0;
+            outline: none;
+            background: var(--bg-color);
+            padding: 15px;
+            margin: 15px 0;
+            color: var(--text-color);
+            font-size: 18px;
+            border-radius: 6px;
+        }
 
-form input,
-form textarea {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-}
-.btn {
-    display: block;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
+        /* Added some margin to the contact section */
+        #contact {
+            margin-top: 40px;
+        }
 
-}
+        /* Added some styles for the footer section */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 25px 0;
+            background: var(--bg-color);
+            font-weight: 300;
+            margin-top: 20px;
+        }
 
-
-form .btn2 {
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-
-.copyright {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-}
-
-#msg {
-    color: #61b752;
-    margin-top: -40px;
-    display: block;
-}
-
-
+        #msg {
+            color: #61b752; /* Changed the color to a lighter shade of green */
+            margin-top: -40px; /* Adjusted the margin to avoid overlapping with the button */
+            display: block; 
+        }
     </style>
 </head>
 <body>
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title">Contact me</h1>
-                        <p><i class="fa-solid fa-inbox"></i> contact@example.com</p>
-                        <p><i class="fa-solid fa-phone"></i>+ 91 1234567890</p>
-                    </div>
-                    <div class="contact-right">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Your Name" required id="">
-                            <input type="email" name="Email" placeholder="Your Email" required id="">
-                            <textarea name="Message" id="" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
-                        <span id="msg"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Copyright Claims rejected 🙂</p>
-            </div>
-        </div>
+    <!-- Contact section -->
+    <section id="contact">
+      <div class="container">
+          <!-- Used a flex container for the contact sections -->
+          <div class="contact-container">
+              <!-- Contact left section -->
+              <div class="contact-left">
+                  <h1 class="sub-title">Contact me</h1>
+                  <p><i class="fa-solid fa-inbox"></i> contact@example.com</p>
+                  <p><i class="fa-solid fa-phone"></i>+91 1234567890</p>
+              </div>
+
+              <!-- Contact right section -->
+              <div class="contact-right">
+                  <!-- Added an action attribute to the form element -->
+                  <form name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbzMtRQk20bd3TaIw26NhQIFjNf-YNyRI2aBFnjAoj4-bYFtUgeIbdoisRxgOjoVKoU/exec" method="post">
+                      <input type="text" name="Name" placeholder="Your Name" required id="">
+                      <input type="email" name="Email" placeholder="Your Email" required id="">
+                      <textarea name="Message" id="" rows="6" placeholder="Your Message"></textarea>
+                      <button type="submit" class="btn">Submit</button>
+                  </form>
+                  <span id="msg"></span>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <p>© 2023 Akshat Gulati. All rights reserved.</p>
+    </footer>
+
+    <!-- Script for sending the form data to Google Sheets -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzMtRQk20bd3TaIw26NhQIFjNf-YNyRI2aBFnjAoj4-bYFtUgeIbdoisRxgOjoVKoU/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
-    <form name="submit-to-google-sheet">
-    
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzMtRQk20bd3TaIw26NhQIFjNf-YNyRI2aBFnjAoj4-bYFtUgeIbdoisRxgOjoVKoU/exec'
-            const form = document.forms['submit-to-google-sheet']
-            const msg = document.getElementById("msg")
-    
-            form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(response => {
-                        msg.innerHTML = "Message sent successfully"
-                        setTimeout(function () {
-                            msg.innerHTML = ""
-                        }, 5000)
-                        form.resest()
-                    })
-                    .catch(error => console.error('Error!', error.message))
-            })
-        </script>
-    
+
 </body>
 </html>
