@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: #080808;
+    z-index: 10;
+    top: 0;
+    /* position the navbar at the top of the page */
+    left: 0;
+    /* position the navbar at the left edge of the page */
+    right: 0;
+    /* position the navbar at the right edge of the page */
+    width: 100%;
+    /* make the navbar take up the full width of the page */
+    height: 113px;
+    overflow: auto;
+
+}
+
+.logo {
+    width: 296px;
+    height: 86px;
+    margin-left: 9px;
+    margin-top: 23px;
+
+
+}
+
+nav ul {
+    margin-left: 400px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+
+}
+
+.header-text h1 span {
+    color: white;
+    background-image: linear-gradient(#ff004f, #4790fc);
+}
+
+</style>
+<body>
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li>
+                        <a href="" download class="btn btn1">Download CV <i class="fa-regular fa-circle-down"></i></a>
+                    </li>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SKILLS</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p style="color: #4790fc;">Developer</p>
+                <h1>Hey, This is<br><span>AKSHAT GULATI</span></h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
