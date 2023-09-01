@@ -1,138 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         #about {
-    padding: 80px 0;
-    color: #ababab;
-}
+            padding: 80px 0;
+            color: #ababab;
+        }
 
-.row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-.about-col-1 {
-    flex-basis: 35%;
-}
+        .about-col-1 {
+            flex-basis: 35%;
+        }
 
-.about-col-1 img {
-    width: 100%;
-    border-radius: 15px;
-}
+        .about-col-1 img {
+            width: 100%;
+            border-radius: 15px;
+        }
 
-.about-col-2 {
-    flex-basis: 60%;
-}
+        .about-col-2 {
+            flex-basis: 60%;
+        }
 
-.sub-title {
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-}
+        .sub-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+        }
 
-.tab-titles {
-    display: flex;
-    margin: 20px 0 40px;
-}
+        .tab-titles {
+            display: flex;
+            margin: 20px 0 40px;
+        }
 
-.tab-links {
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-}
+        .tab-links {
+            margin-right: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
 
-.tab-links::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
+        .tab-links::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
 
-.tab-links.active-link::after {
-    width: 50%;
+        .tab-links.active-link::after {
+            width: 50%;
 
-}
+        }
 
-.tab-contents ul li {
-    list-style: none;
-    margin: 10px 0;
+        .tab-contents ul li {
+            list-style: none;
+            margin: 10px 0;
 
-}
+        }
 
-.tab-contents ul li span {
-    color: #b54769;
-    font-size: 14px;
-}
+        .tab-contents ul li span {
+            color: #b54769;
+            font-size: 14px;
+        }
 
-.tab-contents {
-    display: none;
-}
+        .tab-contents {
+            display: none;
+        }
 
-.tab-contents.active-tab {
-    display: block;
-}
-
-
+        .tab-contents.active-tab {
+            display: block;
+        }
     </style>
 </head>
+
 <body>
-        <!-- ---------about--------->
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="images/user.png" alt="">
+    <!-- ---------about--------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">ABOUT ME</h1>
+                    <p>My name is Akshat Gulati and I come from Delhi. I am pursuing engineering in Computer Science at
+                        Chitkara University. I have a passion for coding, and I love to play football in my spare time.
+                        My short-term goal is to become a software engineer at a renowned institution and during my
+                        prime time to start
+                        my own business.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">ABOUT ME</h1>
-                        <p>My name is Akshat Gulati and I come from Delhi. I am pursuing engineering in Computer Science at
-                            Chitkara University. I have a passion for coding, and I love to play football in my spare time.
-                            My short-term goal is to become a software engineer at a renowned institution and during my
-                            prime time to start
-                            my own business.</p>
-    
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>Web Development</span><BR>DESIGNING WEB/APP</BR></li>
-                                <li><span>Software Development</span><BR>Java/C/C++/Python</BR></li>
-                                <li><span>Community Management</span><BR>Building Community</BR></li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>2021-2025</span><BR>Education: BE CSE, Chitkara University</BR></li>
-                                <li><span>2023-Present</span><BR>HonorTech Community</BR></li>
-                                <li><span>2020-2022</span><BR>realme Community</BR></li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2024</span><BR>B.E Computer Science Engineering from Chitkara University,
-                                    Punjab</BR>
-                                </li>
-                                <li><span>2021</span><BR>12th from MSMS Delhi</BR></li>
-                                <li><span>2019</span><BR>10th from MSMS Delhi</BR></li>
-                            </ul>
-                        </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><BR>DESIGNING WEB/APP</BR></li>
+                            <li><span>Software Development</span><BR>Java/C/C++/Python</BR></li>
+                            <li><span>Community Management</span><BR>Building Community</BR></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021-2025</span><BR>Education: BE CSE, Chitkara University</BR></li>
+                            <li><span>2023-Present</span><BR>HonorTech Community</BR></li>
+                            <li><span>2020-2022</span><BR>realme Community</BR></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><BR>B.E Computer Science Engineering from Chitkara University,
+                                Punjab</BR>
+                            </li>
+                            <li><span>2021</span><BR>12th from MSMS Delhi</BR></li>
+                            <li><span>2019</span><BR>10th from MSMS Delhi</BR></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
+
 </html>
