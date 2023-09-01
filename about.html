@@ -4,8 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Akshat Gulati - Portfolio</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif, Arial, Helvetica;
+            /* added a fallback font */
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #080808;
+            color: #fff;
+        }
+
         #about {
             padding: 80px 0;
             color: #ababab;
@@ -61,14 +78,13 @@
         }
 
         .tab-links.active-link::after {
-            width: 50%;
-
+            width: 100%;
+            /* changed from fixed width to percentage */
         }
 
         .tab-contents ul li {
             list-style: none;
             margin: 10px 0;
-
         }
 
         .tab-contents ul li span {
@@ -87,53 +103,72 @@
 </head>
 
 <body>
-    <!-- ---------about--------->
-    <div id="about">
+    <!-- About section -->
+    <section id="about">
         <div class="container">
             <div class="row">
+                <!-- About column 1 -->
                 <div class="about-col-1">
-                    <img src="images/user.png" alt="">
+                    <img src="images/user.png" alt="Akshat Gulati">
                 </div>
+                <!-- About column 2 -->
                 <div class="about-col-2">
                     <h1 class="sub-title">ABOUT ME</h1>
                     <p>My name is Akshat Gulati and I come from Delhi. I am pursuing engineering in Computer Science at
                         Chitkara University. I have a passion for coding, and I love to play football in my spare time.
                         My short-term goal is to become a software engineer at a renowned institution and during my
-                        prime time to start
-                        my own business.</p>
-
+                        prime time to start my own business.</p>
+                    <!-- Tab titles -->
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
+                    <!-- Tab contents -->
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Web Development</span><BR>DESIGNING WEB/APP</BR></li>
-                            <li><span>Software Development</span><BR>Java/C/C++/Python</BR></li>
-                            <li><span>Community Management</span><BR>Building Community</BR></li>
+                            <li><span>Web Development</span><br>DESIGNING WEB/APP</li>
+                            <!-- removed the end tag for <br> -->
+                            <li><span>Software Development</span><br>Java/C/C++/Python</li>
+                            <li><span>Community Management</span><br>Building Community</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>2021-2025</span><BR>Education: BE CSE, Chitkara University</BR></li>
-                            <li><span>2023-Present</span><BR>HonorTech Community</BR></li>
-                            <li><span>2020-2022</span><BR>realme Community</BR></li>
+                            <li><span>2021-2025</span><br>Education: BE CSE, Chitkara University</li>
+                            <li><span>2023-Present</span><br>HonorTech Community</li>
+                            <li><span>2020-2022</span><br>realme Community</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2024</span><BR>B.E Computer Science Engineering from Chitkara University,
-                                Punjab</BR>
+                            <li><span>2024</span><br>B.E Computer Science Engineering from Chitkara University, Punjab
                             </li>
-                            <li><span>2021</span><BR>12th from MSMS Delhi</BR></li>
-                            <li><span>2019</span><BR>10th from MSMS Delhi</BR></li>
+                            <li><span>2021</span><br>12th from MSMS Delhi</li>
+                            <li><span>2019</span><br>10th from MSMS Delhi</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
 </body>
 
 </html>
