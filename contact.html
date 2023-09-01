@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* ----------contact us--------- */
-.contact-left {
+    .contact-left {
     flex-basis: 35%;
 }
 
@@ -105,7 +104,6 @@ form .btn2 {
     </style>
 </head>
 <body>
-        <!-- -----------Contact us starts here----------- -->
         <div id="contact">
             <div class="container">
                 <div class="row">
@@ -129,5 +127,27 @@ form .btn2 {
                 <p>Copyright Claims rejected 🙂</p>
             </div>
         </div>
+    </script>
+    <form name="submit-to-google-sheet">
+    
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzMtRQk20bd3TaIw26NhQIFjNf-YNyRI2aBFnjAoj4-bYFtUgeIbdoisRxgOjoVKoU/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+    
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        msg.innerHTML = "Message sent successfully"
+                        setTimeout(function () {
+                            msg.innerHTML = ""
+                        }, 5000)
+                        form.resest()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+    
 </body>
 </html>
